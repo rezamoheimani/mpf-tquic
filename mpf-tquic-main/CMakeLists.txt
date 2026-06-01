@@ -47,8 +47,8 @@ include_directories(${EV_INC})
 # needed if static tquic library is used
 find_library(M_LIB m)
 
-add_executable(mpf-gw-client src/simple_client.c)
+add_executable(mpf-gw-client src/mpf-client.c)
 target_link_libraries(mpf-gw-client PRIVATE libtquic ${EV_LIB} ${M_LIB})
 
-add_executable(mpf-gw-server src/simple_server.c)
+add_executable(mpf-gw-server src/mpf-server.c)
 target_link_libraries(mpf-gw-server PRIVATE libtquic ${EV_LIB} ${M_LIB})
